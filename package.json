@@ -1,0 +1,27 @@
+{
+  "name": "alfarq",
+  "version": "1.0.0",
+  "description": "determines the difference between values of any data type in javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/al-bimani/alfarq.git"
+  },
+  "keywords": [
+    "alfarq",
+    "diffrence",
+    "variance",
+    "array-diffrence",
+    "object-diffrence",
+    "changes"
+  ],
+  "author": "al-bimani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/al-bimani/alfarq/issues"
+  },
+  "homepage": "https://github.com/al-bimani/alfarq#readme"
+}
