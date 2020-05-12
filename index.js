@@ -1,14 +1,15 @@
 const isc = require('is-circular');
 
-function _in(b, type, a, _of) {
+function _in(b, a) {
     let result = null;
     if (b && typeof b == "object") {
-        if (isc(a) || isc(b)) {
+        if (isc(b)) {
             let err = new TypeError("circular structure not allowed");
             throw err;
         };
         result = b instanceof Array ? [] : {};
         for (let key in b) {
+            if (!a) continue;
             let farq = _of(a[key]).in(b[key]);
             if (farq != null) result[key] = farq;
         }
@@ -20,10 +21,12 @@ function _in(b, type, a, _of) {
 
 function _of(a) {
     return {
-        in: (something) => _in(something, typeof a, a, _of)
+        in: function (b) {
+            return _in(b, a)
+        }
     }
 }
 
 module.exports = {
-    of: (something) => _of(something)
+    of: (b) => _of(b)
 }
