@@ -1,6 +1,6 @@
 {
   "name": "alfarq",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "determines the difference between values of any data type in javascript.",
   "main": "index.js",
   "scripts": {
